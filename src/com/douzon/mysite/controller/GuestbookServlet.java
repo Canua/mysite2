@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletResponse;
 import com.douzon.mvc.action.AbstractActionFactory;
 import com.douzon.mvc.action.Action;
 import com.douzon.mysite.action.guestbook.GuestBookActionFactory;
-import com.douzon.mysite.action.user.UserActionFactory;
 
 @WebServlet("/guestbook")
 public class GuestbookServlet extends HttpServlet {
@@ -19,7 +18,6 @@ public class GuestbookServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
 		String actionName = request.getParameter("a");
 
 		AbstractActionFactory af = new GuestBookActionFactory();

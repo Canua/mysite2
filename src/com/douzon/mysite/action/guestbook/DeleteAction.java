@@ -26,7 +26,8 @@ public class DeleteAction implements Action {
 
 		new GuestbookDao().delete(vo);
 
-		WebUtils.redirect(request, response, request.getContextPath() + "/guestbook?a=list");
+//		WebUtils.redirect(request, response, request.getContextPath() + "/guestbook?a=list");
+		WebUtils.redirect(request, response, request.getContextPath() + "/guestbook");
 
 	}
 

@@ -11,15 +11,12 @@ public class GuestBookActionFactory extends AbstractActionFactory {
 		Action action = null;
 		if ("deleteform".equals(actionName)) {
 			action = new DeleteFormAction();
-		} else if ("list".equals(actionName)) {
-			action = new listAction();
 		} else if ("insert".equals(actionName)) {
 			action = new InstertAction();
 		} else if ("delete".equals(actionName)) {
 			action = new DeleteAction();
-		}
-		else {
-			action = new IndexAction();
+		} else {
+			action = new ListAction();
 		}
 		return action;
 	}

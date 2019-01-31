@@ -26,7 +26,7 @@ public class InstertAction implements Action {
 
 		new GuestbookDao().insert(vo);
 
-		WebUtils.redirect(request, response, request.getContextPath() + "/guestbook?a=list");
+		WebUtils.redirect(request, response, request.getContextPath() + "/guestbook");
 	}
 
 }

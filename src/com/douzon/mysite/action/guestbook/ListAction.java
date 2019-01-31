@@ -12,7 +12,7 @@ import com.douzon.mvc.util.WebUtils;
 import com.douzon.mysite.repository.GuestbookDao;
 import com.douzon.mysite.vo.GuestbookVo;
 
-public class listAction implements Action {
+public class ListAction implements Action {
 
 	@Override
 	public void excute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -21,7 +21,7 @@ public class listAction implements Action {
 
 		request.setAttribute("list", list);
 
-		WebUtils.forward(request, response, "WEB-INF/views/guestbook/list.jsp");
+		WebUtils.forward(request, response, "/WEB-INF/views/guestbook/list.jsp");
 	}
 
 }

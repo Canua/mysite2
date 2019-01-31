@@ -16,10 +16,14 @@
 		<div id="content">
 			<div id="board">
 				<form class="board-form" method="post" action="${pageContext.servletContext.contextPath }/board">
-					<input type="hidden" name="a" value="insert">
+					<input type="hidden" name="a" value="reply">
+					<input type='hidden' name="no" value="${param.no}">
+					<input type="hidden" name="gno" value="${vo.g_no }">
+					<input type="hidden" name="ono" value="${vo.o_no }">
+					<input type="hidden" name="depth" value="${vo.depth }">
 					<table class="tbl-ex">
 						<tr>
-							<th colspan="2">글쓰기</th>
+							<th colspan="2">답글쓰기</th>
 						</tr>
 						<tr>
 							<td class="label">제목</td>
