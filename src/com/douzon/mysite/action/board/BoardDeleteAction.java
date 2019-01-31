@@ -15,9 +15,7 @@ public class BoardDeleteAction implements Action {
 
 	@Override
 	public void excute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		System.out.println("!");
 		long no = Long.parseLong(request.getParameter("no"));
-		System.out.println(no);
 
 		new BoardDao().delete(no);
 

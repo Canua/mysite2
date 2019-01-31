@@ -26,9 +26,6 @@ public class BoardModifyAction implements Action {
 		vo.setNo(viewNo);
 		vo.setTitle(title);
 		vo.setContents(contents);
-		System.out.println(vo.getNo());
-		System.out.println(vo.getTitle());
-		System.out.println(vo.getContents());
 		new BoardDao().update(vo);
 		
 		WebUtils.redirect(request, response, request.getContextPath() + "/board?a=view&no=" + viewNo);

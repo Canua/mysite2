@@ -20,7 +20,6 @@ public class IndexAction implements Action {
 		Cookie[] cookies = request.getCookies();
 		if (cookies != null && cookies.length > 0) {
 			for (Cookie c : cookies) {
-//				System.out.println(c.getName() + ":" + c.getValue());
 				if ("visitCount".equals(c.getName())) {
 					count = Integer.parseInt(c.getValue());
 					break;

@@ -48,7 +48,6 @@ public class BoardDao {
 	}
 
 	public long hitUpdate(long viewNo) {
-		System.out.println("!!!");
 		int count = 0;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
@@ -466,70 +465,6 @@ public class BoardDao {
 
 		return list;
 	}
-//	public 	List<BoardVo> select(String kwd, int selectCount, int pageNum) {
-//		List<BoardVo> list = new ArrayList<BoardVo>();
-//		Connection conn = null;
-//		Statement stmt = null;
-//		ResultSet rs = null;
-//		PreparedStatement pstmt = null;
-//
-//		
-//		try {
-//			conn = getConnection();
-//			stmt = conn.createStatement();
-//
-//
-//			if(selectCount == 1) {
-//			String sql = "select a.no, title, b.name, hit, date_format(write_date, '%Y-%m-%d %h:%i:%s'), a.user_no, a.depth \r\n" + 
-//					"from board a, user b \r\n" + 
-//					"where a.user_no = b.no \r\n" + 
-//					" AND (a.title LIKE '%" + kwd + "%'\r\n" + 
-//					"	OR b.name LIKE '%"+ kwd + "%')\r\n" + 
-//					"order by g_no desc, o_no asc limit ?, 5";
-//			
-//			pstmt = conn.prepareCall(sql);
-//
-//			pstmt.setInt(1, pageNum);
-//
-//			rs = pstmt.executeQuery();
-//
-//			while (rs.next()) {
-//					long no = rs.getLong(1);
-//					String title = rs.getString(2);
-//					String name = rs.getString(3);
-//					long hit = rs.getLong(4);
-//					String writeDate = rs.getString(5);
-//					long user_no = rs.getLong(6);
-//					long depth = rs.getLong(7);
-//					BoardVo vo = new BoardVo();
-//					vo.setNo(no);
-//					vo.setTitle(title);
-//					vo.setName(name);
-//					vo.setHit(hit);
-//					vo.setWriteDate(writeDate);
-//					vo.setUser_no(user_no);
-//					vo.setDepth(depth);
-//					list.add(vo);
-//				}
-//			}
-//		} catch (SQLException e) {
-//			System.out.println("error : " + e);
-//		} finally {
-//			try {
-//				if (rs != null)
-//					rs.close();
-//				if (pstmt != null)
-//					pstmt.close();
-//				if (stmt != null) 
-//					stmt.close();
-//				if (conn != null)
-//					conn.close();
-//			} catch (SQLException e) {
-//				e.printStackTrace();
-//			}
-//		}
-//		return list;
-//	}
 	public 	List<BoardVo> select(String kwd, int selectCount){
 		List<BoardVo> list = new ArrayList<BoardVo>();
 		Connection conn = null;

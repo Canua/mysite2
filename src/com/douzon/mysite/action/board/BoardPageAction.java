@@ -23,10 +23,8 @@ public class BoardPageAction implements Action {
 		BoardDao dao = new BoardDao();
 		List<BoardVo> list_set = dao.getList();
 		int pageCreate = list_set.size() / 5;
-//		System.out.println("나와야 할 페이지 수 : " + pageCreate);
 		if (pageNum_set < 1) {
 			pageNum_set = 1;
-//			System.out.println(pageNum_set);
 		}
 		if(list_set.size()%5 != 0) {
 			pageCreate += 1;
@@ -49,7 +47,6 @@ public class BoardPageAction implements Action {
 		request.setAttribute("list_set", list_set);
 
 		int pageNum = (pageNum_set - 1) * 5;
-//		System.out.println("페이지 번호 : " + pageNum_set);
 		request.setAttribute("pagecreate", pageCreate);
 		request.setAttribute("pageNum_set", pageNum_set);
 		List<BoardVo> list = dao.getPageList(pageNum);
