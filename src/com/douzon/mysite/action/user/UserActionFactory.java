@@ -2,7 +2,6 @@ package com.douzon.mysite.action.user;
 
 import com.douzon.mvc.action.AbstractActionFactory;
 import com.douzon.mvc.action.Action;
-import com.douzon.mysite.action.board.BoardAction;
 import com.douzon.mysite.action.main.IndexAction;
 
 public class UserActionFactory extends AbstractActionFactory {

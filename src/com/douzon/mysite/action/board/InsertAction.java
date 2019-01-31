@@ -18,7 +18,6 @@ public class InsertAction implements Action {
 	@Override
 	public void excute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		UserVo authUser = null;
-		System.out.println("?");
 
 		HttpSession session = request.getSession();
 		if (session != null) {

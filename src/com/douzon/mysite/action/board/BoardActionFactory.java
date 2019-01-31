@@ -20,18 +20,13 @@ public class BoardActionFactory extends AbstractActionFactory {
 			action = new BoardModifyAction();
 		} else if ("deleteboard".equals(actionName)) {
 			action = new BoardDeleteAction();
-		}else if ("replyform".equals(actionName)) {
+		} else if ("replyform".equals(actionName)) {
 			action = new ReplyFormAction();
-		}else if ("reply".equals(actionName)) {
+		} else if ("reply".equals(actionName)) {
 			action = new ReplyAction();
-		}else if ("search".equals(actionName)) {
+		} else if ("search".equals(actionName)) {
 			action = new searchAction();
-		} 
-//		else if ("page".equals(actionName)) {
-//			action = new BoardPageAction();
-//		}
-		else {
-//			action = new BoardAction();
+		} else {
 			action = new BoardPageAction();
 		}
 		return action;
