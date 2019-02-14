@@ -15,6 +15,8 @@ public class GuestBookActionFactory extends AbstractActionFactory {
 			action = new InstertAction();
 		} else if ("delete".equals(actionName)) {
 			action = new DeleteAction();
+		} else if ("ajax".equals(actionName)) { // ajax 프로그래밍이 되어 있는 jsp를 보여달라 // ajax 요청이 아니다
+			action = new AjaxAction();
 		} else {
 			action = new ListAction();
 		}

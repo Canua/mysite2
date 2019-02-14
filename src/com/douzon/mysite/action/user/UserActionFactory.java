@@ -25,6 +25,8 @@ public class UserActionFactory extends AbstractActionFactory {
 			action = new ModifyFormAction();
 		} else if ("modify".equals(actionName)) {
 			action = new ModifyAction();
+		} else if ("ajax-checkemail".equals(actionName)) {
+			action = new AjaxCheckEmailAction();
 		} else {
 			action = new IndexAction(); // 잘못된 url 입력시 index.jsp - main으로 이동
 		}
